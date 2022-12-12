@@ -1,0 +1,55 @@
+<!-- This web page is copied by "https://bazhan.wang" --><html><head><meta charset="utf-8">
+    <title>2023年除夕倒计时</title>
+   
+    <meta name="viewport" content="width=width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0;viewport-fit=cover">
+    <link rel="stylesheet" type="text/css" href="css/guonian.css">
+    <link rel="stylesheet" type="text/css" href="css/dong.css">
+
+    <script type="text/javascript" src="js/guonian.js">  </script>
+    <script type="text/javascript" src="js/rili.js">  </script>
+</head>
+
+<body>
+    <div style="display: none;">
+
+        <audio id="musicfc" style="width:0;height:0;display:none;" autoplay="autoplay" loop="loop">
+            <source src="media/111.mp3" crossorigin="anonymous" type="audio/mp3">
+        </audio>
+    </div>
+
+    <div class="main">
+        <div class="juli"><span id="jintian"></span></div>
+        <div class="juli2">距离2023年1月21日&nbsp;&nbsp;除夕还有</div>
+        <div class="juli3"><span id="juli"></span></div>
+        <!-- <div class="time" id="time"> </div> -->
+    </div>
+
+
+<script type="text/javascript">
+    function pplay() {
+        var audio = document.getElementById('musicfc'),
+            play = function () {
+                audio.play();
+                audio.volume = 1.0;
+                document.removeEventListener("touchstart", play, false);
+            };
+
+        document.addEventListener("WeixinJSBridgeReady", function () {
+            play();
+        }, false);
+        document.addEventListener('YixinJSBridgeReady', function () {
+            play();
+        }, false);
+        document.addEventListener("touchstart", play, false);
+        setTimeout(() => {
+            audio.pause()
+            audio.load();
+            audio.play();
+        }, 2000);
+    }
+
+
+</script>
+<script type="text/javascript" src="js/guojierili.js">  </script>
+
+</body></html>
